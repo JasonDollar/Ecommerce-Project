@@ -25,6 +25,6 @@ export default CollectionItem
 CollectionItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
 }
