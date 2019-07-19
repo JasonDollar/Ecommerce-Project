@@ -22,6 +22,6 @@ const FormInput = ({ handleChange, label, ...otherProps }) => (
 export default FormInput
 
 FormInput.propTypes = {
-  handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func,
   label: PropTypes.string.isRequired,
 }
