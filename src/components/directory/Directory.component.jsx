@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import PropTypes from 'prop-types'
@@ -25,7 +25,7 @@ Directory.propTypes = {
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
-    size: PropTypes.string.isRequired,
+    size: PropTypes.string,
     id: PropTypes.number.isRequired,
     linkUrl: PropTypes.string.isRequired,
   })).isRequired,
