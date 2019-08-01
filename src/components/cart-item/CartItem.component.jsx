@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './CartItem.styles.scss'
+import {
+  CartItemContainer,
+  ItemDetailsContainer,
+  CartItemImage,
+} from './CartItem.styles'
 
 const CartItem = ({
   item: {
@@ -10,13 +14,15 @@ const CartItem = ({
 }) => {
   let i
   return (
-    <div className="cart-item">
-      <img src={imageUrl} alt=" cart item" />
-      <div className="item-details">
-        <span className="name">{name}</span>
-        <span className="price">{quantity}x ${price}</span>
-      </div>
-    </div>
+    <CartItemContainer>
+      <CartItemImage src={imageUrl} alt="item" />
+      <ItemDetailsContainer>
+        <span>{name}</span>
+        <span>
+          {quantity} x ${price}
+        </span>
+      </ItemDetailsContainer>
+    </CartItemContainer>
   )
 }
 
