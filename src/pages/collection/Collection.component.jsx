@@ -5,11 +5,13 @@ import CollectionItem from '../../components/collection-item/CollectionItem.comp
 import './Collection.styles.scss'
 
 const Collection = ({ match, collection }) => {
-  console.log(collection)
+  const { title, items } = collection
   return (
     <div className="collection-page">
-      <h2>Collection Page</h2>
-
+      <h2 className="title">{title}</h2>
+      <div className="items">
+        {items.map(item => <CollectionItem key={items.id} item={item} />)}
+      </div>
     </div>
   )
 }
